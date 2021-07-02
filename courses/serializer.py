@@ -1,9 +1,11 @@
 #this is our serializer page
 #another comment
+from django.db.models import fields
 from rest_framework import serializers
-from . models import Course
+from . models import Restaurant
 
-class CourseSerializer(serializers.HyperlinkedModelSerializer):
+class RestaurantSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Course
-        fields =('id','url','name','language','price')
+        model = Restaurant
+        fields =('id','url','product','description','price')
+    

@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Course
-from .serializer import CourseSerializer
+from .models import Restaurant
+from .serializer import RestaurantSerializer
 
-class Courseview(viewsets.ModelViewSet):
-    queryset = Course.objects.all()
-    serializer_class = CourseSerializer
+class Restaurantview(viewsets.ModelViewSet):
+    queryset = Restaurant.objects.all()
+    serializer_class = RestaurantSerializer
+
+
 
 
